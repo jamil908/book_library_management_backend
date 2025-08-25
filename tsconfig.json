@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment
+    "module": "commonjs",
+    "target": "es2020",
+    "moduleResolution": "node",
+    "types": ["node"],
+
+     "esModuleInterop": true,     // ✅ add this
+    "allowSyntheticDefaultImports": true, // ✅ optional, but good with the above
+
+    // Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Type Safety
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
