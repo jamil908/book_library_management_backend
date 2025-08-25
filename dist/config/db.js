@@ -1,5 +1,5 @@
+"use strict";
 // import mongoose from "mongoose";
-
 // export const connectDB = async () => {
 //   try {
 //     await mongoose.connect(process.env.MONGO_URI as string);
@@ -9,3 +9,4 @@
 //     process.exit(1);
 //   }
 // };
+//# sourceMappingURL=db.js.map
