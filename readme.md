@@ -54,7 +54,8 @@ src/
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
-```bash
+
+bash
 git clone https://github.com/your-username/library-api.git
 cd library-api
 
