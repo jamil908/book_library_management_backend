@@ -110,13 +110,15 @@ DELETE	/api/books/:id	Delete a book
     }
   }
 }
-✨ Main Section (50 Marks)
-1️⃣ Create Book
+```
+ Main Section (50 Marks)
+
+## 1️⃣ Create Book
 POST /api/books
 
 Request:
 
-json
+``` json
 {
   "title": "The Theory of Everything",
   "author": "Stephen Hawking",
@@ -126,10 +128,11 @@ json
   "copies": 5,
   "available": true
 }
+```
 Response:
 
-json
-Copy code
+```json
+
 {
   "success": true,
   "message": "Book created successfully",
@@ -146,12 +149,13 @@ Copy code
     "updatedAt": "2024-11-19T10:23:45.123Z"
   }
 }
-2️⃣ Get All Books
+```
+## 2️⃣ Get All Books
 GET /api/books
 
 Response:
 
-json
+```json
 {
   "success": true,
   "message": "Books retrieved successfully",
@@ -170,10 +174,12 @@ json
     }
   ]
 }
-3️⃣ Get Book by ID
+```
+## 3️⃣ Get Book by ID
 GET /api/books/:bookId
 
 Response:
+```json
 
 {
   "success": true,
@@ -191,16 +197,19 @@ Response:
     "updatedAt": "2024-11-19T10:23:45.123Z"
   }
 }
-4️⃣ Update Book
+```
+## 4️⃣ Update Book
 PUT /api/books/:bookId
 
 Request:
+```json
 
 {
   "copies": 50
 }
+```
 Response:
-
+```json
 {
   "success": true,
   "message": "Book updated successfully",
@@ -217,17 +226,19 @@ Response:
     "updatedAt": "2024-11-20T08:30:00.000Z"
   }
 }
-5️⃣ Delete Book
+```
+## 5️⃣ Delete Book
 DELETE /api/books/:bookId
 
 Response:
-
+```json
 {
   "success": true,
   "message": "Book deleted successfully",
   "data": null
 }
-6️⃣ Borrow a Book
+```
+## 6️⃣ Borrow a Book
 POST /api/borrow/:bookId
 
 Business Logic:
@@ -242,14 +253,15 @@ Save borrow record with book, quantity, and dueDate.
 
 Request:
 
-json
+```json
 {
   "quantity": 2,
   "dueDate": "2025-07-18T00:00:00.000Z"
 }
+```
 Response:
 
-json
+``` json
 {
   "success": true,
   "message": "Book borrowed successfully",
@@ -262,8 +274,9 @@ json
     "updatedAt": "2025-06-18T07:12:15.123Z"
   }
 }
+```
 7️⃣ Borrowed Books Summary (Aggregation)
-GET /api/borrow/summary
+## GET /api/borrow/summary
 
 Purpose:
 
@@ -275,7 +288,7 @@ Implemented using MongoDB Aggregation Pipeline
 
 Response:
 
-json
+```json
 {
   "success": true,
   "message": "Borrowed books summary retrieved successfully",
@@ -296,7 +309,8 @@ json
     }
   ]
 }
-🧪 Testing with Postman
+```
+### 🧪 Testing with Postman
 Set Base URL: http://localhost:5000/api
 
 Add routes for /books and /borrows
@@ -305,7 +319,7 @@ Use JSON body and Content-Type: application/json
 
 Test book creation first before borrowing
 
-🧹 Scripts
+### 🧹 Scripts
 Command	Description
 npm run dev	Run server in development mode
 npm run build	Build TypeScript files
@@ -322,7 +336,7 @@ npm start	Run built server (production)
 
 🧑‍💻 Author
 
-Md Jamil Hossain Rafi
+# Md Jamil Hossain Rafi
 📍 Chittagong, Bangladesh
 💻 GitHub
  | Portfolio
