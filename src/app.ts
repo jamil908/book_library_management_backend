@@ -3,9 +3,11 @@ import dotenv from "dotenv";
 import { BookRoutes } from "./modules/book/book.route";
 import { BorrowRoutes } from "./modules/borrow/borrow.route";
 import { errorHandler } from "./middlewares/errorHandler";
+import cors from "cors";
 
 dotenv.config();
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 app.get("/", (_req, res) => {

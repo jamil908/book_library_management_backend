@@ -19,10 +19,13 @@ borrowSchema.pre("save", async function (next) {
   if (book.copies < this.quantity) throw new Error("Not enough copies available");
 
   book.copies -= this.quantity;
+  
+  // Update availability
+  if (book.copies === 0) {
+    book.available = false;
+  }
+  
   await book.save();
-
-  // Update availability using static method
-  await (Book as any).updateAvailability(book._id);
 
   next();
 });
